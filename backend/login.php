@@ -22,9 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // simpan data user ke session
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['name']    = $row['name'];
+            $_SESSION['role']    = $row['role']; // ambil role dari DB
 
-            // redirect ke dashboard
-            header("Location: dashboard.php");
+            // redirect sesuai role
+            if ($row['role'] === 'admin') {
+                header("Location: ../admin/orders.php");
+            } else {
+                header("Location: ../backend/homepage.php");
+            }
             exit();
         } else {
             echo "Password salah!";
