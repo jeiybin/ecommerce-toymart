@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toymart - Register</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register Toymart</h1>
+    <!-- Form register kirim ke backend/register.php -->
+    <form action="../backend/register.php" method="POST">
+      <label>Nama</label>
+      <input type="text" name="name" placeholder="Masukkan nama" required>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Masukkan email" required>
+
+      <label>Nomor HP</label>
+      <input type="text" name="phone" placeholder="Masukkan nomor HP">
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Masukkan password" required>
+
+      <button type="submit">Register</button>
+    </form>
+    <p>Sudah punya akun? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>
