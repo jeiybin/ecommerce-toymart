@@ -39,7 +39,7 @@ $result = mysqli_query($conn, "SELECT * FROM products ORDER BY created_at DESC")
         </div>
     </div>
 
-    <h2>Dashboard Admin - Daftar Produk</h2>
+    <h2>Daftar Produk</h2>
     <a href="add_product.php" class="btn">+ Tambah Produk</a>
 
     <table>

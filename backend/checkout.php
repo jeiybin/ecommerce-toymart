@@ -6,12 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 $name = $_SESSION['name'];
 
-// contoh data alamat & produk (nanti bisa ambil dari database/session)
-$alamat = "Adzana S<br>Jl. Melati Raya Blok B2 No. 8, Perumahan Griya Asri, Kelurahan Mekarsari, Kecamatan Cibinong, Kabupaten Bogor, Jawa Barat, 16915";
-$produk = [
-  ["nama" => "NYOTA – I AM THE SEASONS", "harga" => 100000, "jumlah" => 1],
-  ["nama" => "CRY BABY", "harga" => 100000, "jumlah" => 1]
-];
+
 $total = 0;
 foreach ($produk as $p) {
   $total += $p["harga"] * $p["jumlah"];
